@@ -5,6 +5,10 @@
 .bigGreen-Triangle {
   transform: translateX(0rem) translateY(10rem) rotate(360deg);
   transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  -webkit-transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  -moz-transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  -ms-transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  -o-transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
 }
 
 .blue-Triangle {
@@ -28,4 +32,8 @@
 .greenSmallTriangle {
   transform: translateX(-5rem) translateY(0rem) rotate(360deg);
   transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  -webkit-transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  -moz-transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  -ms-transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
+  -o-transition: transform 1s cubic-bezier(0.45, -1.12, 0.35, 1.78);
 }
