@@ -1,0 +1,107 @@
+#main{
+    width: auto;
+    background-color: #333;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  header{
+    display: flex;
+    align-items: center;
+  }
+  /*#block_figure {
+    display: flex;
+    border: solid white;
+    background-color: white;
+    width: 40rem;
+    height: 40rem;
+    margin: 0;
+    position: relative ;
+  }*/
+  #bigYellowTriangle{
+    width: 20rem;
+    height: 40rem;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+    background-color:#f9c30f;
+    position: absolute;
+    top: 42.4rem;
+    left :19.9rem;
+    transform: rotate(0.38turn);
+  }
+  #bigGreenTriangle{
+    width: 40rem;
+    height: 20rem;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    background-color: #33c763;
+    position: absolute;
+    top: 52.8rem;
+    left: 24rem;
+    transform: rotate(1.88turn);
+}
+
+  }
+
+  #blueTriangle{
+    width: 10rem;
+    height: 20rem;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    background-color:#3396f8;
+    position: absolute;
+    top: 20rem ;
+  }
+  #greenSmallTriangle{
+    width: 20rem;
+    height: 20rem;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+    background-color: #8bc03d;
+    position: absolute;
+    left: 45.68rem;
+    top: 36.2rem;
+    transform: rotate(0.505turn);
+  }
+  #redSquare{
+    width: 20rem;
+    height: 20rem;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background-color:#f96764;
+    Position: absolute;
+    top: 37.9rem;
+    transform: rotate(0.13turn);
+    left: 6.3rem;
+  }
+
+  #blueParallelogram{
+    width: 35rem;
+    height:10rem;
+    clip-path: polygon(28.5% 0%, 85.6% 0%, 57.5% 100%, 0% 100%);
+    background-color: #8f91d7;
+    position: absolute;
+    right: 35.8rem;
+    bottom: -47.7rem;
+    transform: rotate(0.38turn);
+
+  }
+  #orangeTriangle{
+    width: 20rem;
+    height: 10rem;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    background-color: #fe9832;
+    position: absolute;
+    top: 73.5rem;
+    left: 16.6rem;
+    transform: rotate(0.505turn);
+
+
+  }
+  #blueTriangle{
+    width: 10rem;
+    height: 20rem;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    background-color:#3396f8;
+    position: absolute;
+    transform: rotate(0.755turn);
+    left: 8.76rem;
+    top: 25.8rem;
+
+  }
