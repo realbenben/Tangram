@@ -1,4 +1,8 @@
 
+#main {
+    margin-top: 30%;
+}
+
 .bigYellow-Triangle{
     transform: translateX(5rem) translateY(10rem) rotate(193deg);
     transition: transform 1s cubic-bezier(.45, -1.12, .35,1.78);
