@@ -312,18 +312,33 @@ div.nav {
       height: 70px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 978px) {
   #main {
     transform: scale(60%);
   }
 }
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 844px) {
   #main {
     transform: scale(45%);
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 652px) {
+  #main {
+    transform: scale(35%);
+  }
+}
+@media screen and (max-width: 450px) {
   #main {
     transform: scale(30%);
+  }
+}
+@media screen and (max-width: 400px) {
+  #main {
+    transform: scale(25%);
+  }
+}
+@media screen and (max-width: 320px) {
+  #main {
+    transform: scale(20%);
   }
 }
