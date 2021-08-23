@@ -1,101 +1,4 @@
-body {
-    margin: 0;
-}
-#block-page{
-    /* width: 100vw;
-    height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-#main {
-    width: 80vw;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.figure {
-    position: absolute;
-
-}
-#bigYellow-Triangle{
-    width: 10rem;
-    height: 20rem;
-    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
-    background-color:#f9c30f;
-}
-#bigGreen-Triangle{
-    width: 20rem;
-    height: 10rem;
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    background-color: #33c763;
-
-}
-#blue-Triangle{
-    width: 5rem;
-    height: 10rem;
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-    background-color:#3396f8;
-}
-#greenSmallTriangle{
-    width: 10rem;
-    height: 10rem;
-    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-    background-color: #8bc03d;
-}
-#red-Square{
-    width: 10rem;
-    height: 10rem;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    background-color:#f96764;
-}
-
-#blue-Parallelogram{
-    width: 17.5rem;
-    height:5rem;
-    clip-path: polygon(28.5% 0%, 85.6% 0%, 57.5% 100%, 0% 100%);
-    background-color: #8f91d7;
-    
-
-}
-#orange-Triangle{
-    width: 10rem;
-    height: 5rem;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-    background-color: #fe9832;
-
-
-}
-#blue-Triangle{
-    width: 5rem;
-    height: 10rem;
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-    background-color:#3396f8;
-
-}
-
-@media screen and (max-width: 1024px) {
-    #main {
-        transform: scale(100%);
-    }
-}
-
-@media screen and (max-width: 700px) {
-    #main {
-        transform: scale(75%);
-    }
-}
-@media screen and (max-width: 320px) {
-    #main {
-        transform: scale(35%);
-    }
-
 #block-page {
-  width: 100vw;
   /* height: 100vh; */
   display: flex;
   justify-content: center;
@@ -106,8 +9,8 @@ body {
   margin: 0;
 }
 #main {
-  width: 80vw;
-  height: 80vh;
+  margin-top: 20%;
+  transform: scale(0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,6 +18,106 @@ body {
 header {
   width: 100%;
 }
+.button_burger {
+  width: 35px;
+  height: 22px;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  z-index: 3;
+}
+
+.button_burger.active {
+  position: absolute;
+  top: 1em;
+  left: 60%;
+}
+
+.button_burger span {
+  width: 70%;
+  height: 4px;
+  background-color: black;
+  display: block;
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.button_burger span::before,
+.button_burger span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #01113d;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 5px;
+}
+.button_burger span::before {
+  transform: translateY(-10px);
+}
+.button_burger span::after {
+  transform: translateY(10px);
+}
+.button_burger.active span::before {
+  transform: translateY(0px) rotateZ(45deg);
+  background-color: #01113d;
+  border-radius: 5px;
+}
+
+.button_burger.active span::after {
+  transform: translateY(0px) rotateZ(-45deg);
+  background-color: #01113d;
+  border-radius: 5px;
+}
+
+.button_burger.active span {
+  background-color: transparent;
+}
+
+.nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1em;
+  column-gap: 2em;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+.visible .break {
+  display: none;
+}
+.visible {
+  background-color: rgba(0, 0, 0, 0.200);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  height: 30px;
+  padding: 10px; 
+  background-color: #ffffff;
+  border: none;
+}
+
+.img-btn {
+  width: 100%;
+}
+
+/* end menu */
+
 header nav {
   display: flex;
   flex-wrap: wrap;
@@ -124,11 +127,10 @@ header nav {
 }
 button {
   background-size: contain;
-  background-position: bottom center;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 20px;
   text-indent: -9000px;
-  width: calc(10% - 10px);
+  width: calc(40% - 10px);
   background-color: transparent;
   border: 0;
   margin: 0 10px;
@@ -286,17 +288,38 @@ div.nav {
 /* presentation-------------------------- */
 @media screen and (max-width: 1024px) {
   #main {
-    transform: scale(100%);
+    transform: scale(80%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .nav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100px;
+      padding: 0;
+      visibility: visible;
+      opacity: 1;
+      position: inherit;
+      top: 0;
+  }
+  .button_burger {
+      display: none;
+  }
+
+  button {
+      width: 70px;
+      height: 70px;
   }
 }
 @media screen and (max-width: 700px) {
   #main {
-    transform: scale(75%);
+    transform: scale(60%);
   }
 }
 @media screen and (max-width: 590px) {
   #main {
-    transform: scale(50%);
+    transform: scale(45%);
   }
 }
 @media screen and (max-width: 320px) {
