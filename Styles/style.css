@@ -1,100 +1,3 @@
-
-body {
-    margin: 0;
-}
-#block-page{
-    /* width: 100vw;
-    height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-#main {
-    width: 80vw;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.figure {
-    position: absolute;
-
-}
-#bigYellow-Triangle{
-    width: 10rem;
-    height: 20rem;
-    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
-    background-color:#f9c30f;
-}
-#bigGreen-Triangle{
-    width: 20rem;
-    height: 10rem;
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    background-color: #33c763;
-
-}
-#blue-Triangle{
-    width: 5rem;
-    height: 10rem;
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-    background-color:#3396f8;
-}
-#greenSmallTriangle{
-    width: 10rem;
-    height: 10rem;
-    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-    background-color: #8bc03d;
-}
-#red-Square{
-    width: 10rem;
-    height: 10rem;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    background-color:#f96764;
-}
-
-#blue-Parallelogram{
-    width: 17.5rem;
-    height:5rem;
-    clip-path: polygon(28.5% 0%, 85.6% 0%, 57.5% 100%, 0% 100%);
-    background-color: #8f91d7;
-    
-
-}
-#orange-Triangle{
-    width: 10rem;
-    height: 5rem;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-    background-color: #fe9832;
-
-
-}
-#blue-Triangle{
-    width: 5rem;
-    height: 10rem;
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
-    background-color:#3396f8;
-
-}
-
-@media screen and (max-width: 1024px) {
-    #main {
-        transform: scale(100%);
-    }
-}
-
-@media screen and (max-width: 700px) {
-    #main {
-        transform: scale(75%);
-    }
-}
-@media screen and (max-width: 320px) {
-    #main {
-        transform: scale(35%);
-    }
-
 #block-page {
   width: 100vw;
   /* height: 100vh; */
@@ -109,12 +12,71 @@ body {
 #main {
   width: 80vw;
   height: 80vh;
+  transform: scale(0.6);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 header {
   width: 100%;
+}
+
+.button_burger {
+    width: 35px;
+    height: 22px;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 3;
+}
+
+.button_burger.active {
+    position: absolute;
+    top: 1em;
+    left: 60%;
+}
+
+.button_burger span {
+    width: 70%;
+    height: 4px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    transition: background-color 0.5s ease-in-out;
+}
+.button_burger.active span::before {
+  transform: translateY(0px) rotateZ(45deg);
+  background-color: #01113d;
+  border-radius: 5px;
+}
+
+.button_burger.active span::after {
+  transform: translateY(0px) rotateZ(-45deg);
+  background-color: #01113d;
+  border-radius: 5px;
+}
+
+.button_burger.active span {
+  background-color: transparent;
+}
+
+.button_burger span::before,
+.button_burger span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #01113d;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 5px;
+}
+.button_burger span::before {
+    transform: translateY(-10px);
+}
+.button_burger span::after {
+    transform: translateY(10px);
 }
 header nav {
   display: flex;
@@ -287,21 +249,36 @@ div.nav {
 /* presentation-------------------------- */
 @media screen and (max-width: 1024px) {
   #main {
-    transform: scale(100%);
-  }
-}
-@media screen and (max-width: 700px) {
-  #main {
     transform: scale(75%);
   }
 }
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 978px) {
+  #main {
+    transform: scale(65%);
+  }
+}
+@media screen and (max-width: 844px) {
   #main {
     transform: scale(50%);
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 652px) {
+  #main {
+    transform: scale(35%);
+  }
+}
+@media screen and (max-width: 450px) {
   #main {
     transform: scale(30%);
+  }
+}
+@media screen and (max-width: 400px) {
+  #main {
+    transform: scale(25%);
+  }
+}
+@media screen and (max-width: 320px) {
+  #main {
+    transform: scale(20%);
   }
 }
